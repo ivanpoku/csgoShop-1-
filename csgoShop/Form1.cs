@@ -12,13 +12,15 @@ namespace csgoShop
 {
     public partial class Form1 : Form
     {
-        double deagleCost;
-        double tec9Cost;
-        double glockCost;
+        double deagleCost = 700;
+        double tec9Cost = 500;
+        double glockCost = 200;
         double deagleClick;
         double tec9Click;
         double glockClick;
         double taxRate = 0.13;
+        double tendered;
+        string deagleItem = "Deagle";
         
         public Form1()
         {
@@ -42,7 +44,16 @@ namespace csgoShop
 
         private void deagleImage_Click(object sender, EventArgs e)
         {
+            reciptLabel.Visible = true;
+            reciptPriceOutput.Text = $"{deagleCost}";
+            itemBoughtOutput.Text = $"{deagleItem}";
+            
+        }
 
+        private void tenderedTextBox_TextChanged(object sender, EventArgs e)
+        {
+            tendered = Convert.ToDouble(tenderedTextBox.Text);
+            tenderedReciptOutput.Text = $"{tendered}";
         }
     }
 }

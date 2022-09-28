@@ -47,6 +47,12 @@
             this.lineText = new System.Windows.Forms.Label();
             this.tenderedTextBox = new System.Windows.Forms.TextBox();
             this.tenderedCashTextLabel = new System.Windows.Forms.Label();
+            this.reciptPriceDisplay = new System.Windows.Forms.Label();
+            this.tenderedDisplayLabel = new System.Windows.Forms.Label();
+            this.reciptPriceOutput = new System.Windows.Forms.Label();
+            this.tenderedReciptOutput = new System.Windows.Forms.Label();
+            this.reciptItemBoughtLabel = new System.Windows.Forms.Label();
+            this.itemBoughtOutput = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.shopBase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deagleImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tec9Image)).BeginInit();
@@ -242,6 +248,7 @@
             this.tenderedTextBox.Name = "tenderedTextBox";
             this.tenderedTextBox.Size = new System.Drawing.Size(200, 20);
             this.tenderedTextBox.TabIndex = 16;
+            this.tenderedTextBox.TextChanged += new System.EventHandler(this.tenderedTextBox_TextChanged);
             // 
             // tenderedCashTextLabel
             // 
@@ -254,12 +261,78 @@
             this.tenderedCashTextLabel.TabIndex = 17;
             this.tenderedCashTextLabel.Text = "Enter Tendered Cash";
             // 
+            // reciptPriceDisplay
+            // 
+            this.reciptPriceDisplay.AutoSize = true;
+            this.reciptPriceDisplay.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reciptPriceDisplay.Location = new System.Drawing.Point(752, 184);
+            this.reciptPriceDisplay.Name = "reciptPriceDisplay";
+            this.reciptPriceDisplay.Size = new System.Drawing.Size(74, 24);
+            this.reciptPriceDisplay.TabIndex = 18;
+            this.reciptPriceDisplay.Text = "Price: ";
+            // 
+            // tenderedDisplayLabel
+            // 
+            this.tenderedDisplayLabel.AutoSize = true;
+            this.tenderedDisplayLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tenderedDisplayLabel.Location = new System.Drawing.Point(712, 224);
+            this.tenderedDisplayLabel.Name = "tenderedDisplayLabel";
+            this.tenderedDisplayLabel.Size = new System.Drawing.Size(111, 24);
+            this.tenderedDisplayLabel.TabIndex = 19;
+            this.tenderedDisplayLabel.Text = "Tendered:";
+            // 
+            // reciptPriceOutput
+            // 
+            this.reciptPriceOutput.AutoSize = true;
+            this.reciptPriceOutput.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reciptPriceOutput.Location = new System.Drawing.Point(824, 184);
+            this.reciptPriceOutput.Name = "reciptPriceOutput";
+            this.reciptPriceOutput.Size = new System.Drawing.Size(34, 24);
+            this.reciptPriceOutput.TabIndex = 20;
+            this.reciptPriceOutput.Text = "Nil";
+            // 
+            // tenderedReciptOutput
+            // 
+            this.tenderedReciptOutput.AutoSize = true;
+            this.tenderedReciptOutput.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tenderedReciptOutput.Location = new System.Drawing.Point(824, 224);
+            this.tenderedReciptOutput.Name = "tenderedReciptOutput";
+            this.tenderedReciptOutput.Size = new System.Drawing.Size(34, 24);
+            this.tenderedReciptOutput.TabIndex = 21;
+            this.tenderedReciptOutput.Text = "Nil";
+            // 
+            // reciptItemBoughtLabel
+            // 
+            this.reciptItemBoughtLabel.AutoSize = true;
+            this.reciptItemBoughtLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reciptItemBoughtLabel.Location = new System.Drawing.Point(760, 144);
+            this.reciptItemBoughtLabel.Name = "reciptItemBoughtLabel";
+            this.reciptItemBoughtLabel.Size = new System.Drawing.Size(60, 24);
+            this.reciptItemBoughtLabel.TabIndex = 22;
+            this.reciptItemBoughtLabel.Text = "Item:";
+            // 
+            // itemBoughtOutput
+            // 
+            this.itemBoughtOutput.AutoSize = true;
+            this.itemBoughtOutput.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemBoughtOutput.Location = new System.Drawing.Point(824, 144);
+            this.itemBoughtOutput.Name = "itemBoughtOutput";
+            this.itemBoughtOutput.Size = new System.Drawing.Size(34, 24);
+            this.itemBoughtOutput.TabIndex = 23;
+            this.itemBoughtOutput.Text = "Nil";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(952, 450);
+            this.Controls.Add(this.itemBoughtOutput);
+            this.Controls.Add(this.reciptItemBoughtLabel);
+            this.Controls.Add(this.tenderedReciptOutput);
+            this.Controls.Add(this.reciptPriceOutput);
+            this.Controls.Add(this.tenderedDisplayLabel);
+            this.Controls.Add(this.reciptPriceDisplay);
             this.Controls.Add(this.glockFiringTypeLabel);
             this.Controls.Add(this.glockImage);
             this.Controls.Add(this.tenderedCashTextLabel);
@@ -309,6 +382,12 @@
         private System.Windows.Forms.Label lineText;
         private System.Windows.Forms.TextBox tenderedTextBox;
         private System.Windows.Forms.Label tenderedCashTextLabel;
+        private System.Windows.Forms.Label reciptPriceDisplay;
+        private System.Windows.Forms.Label tenderedDisplayLabel;
+        private System.Windows.Forms.Label reciptPriceOutput;
+        private System.Windows.Forms.Label tenderedReciptOutput;
+        private System.Windows.Forms.Label reciptItemBoughtLabel;
+        private System.Windows.Forms.Label itemBoughtOutput;
     }
 }
 
