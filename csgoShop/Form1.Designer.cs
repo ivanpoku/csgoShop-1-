@@ -53,6 +53,9 @@
             this.tenderedReciptOutput = new System.Windows.Forms.Label();
             this.reciptItemBoughtLabel = new System.Windows.Forms.Label();
             this.itemBoughtOutput = new System.Windows.Forms.Label();
+            this.lineText2 = new System.Windows.Forms.Label();
+            this.subTotalLabel = new System.Windows.Forms.Label();
+            this.subTotalOutput = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.shopBase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deagleImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tec9Image)).BeginInit();
@@ -248,6 +251,7 @@
             this.tenderedTextBox.Name = "tenderedTextBox";
             this.tenderedTextBox.Size = new System.Drawing.Size(200, 20);
             this.tenderedTextBox.TabIndex = 16;
+            this.tenderedTextBox.Visible = false;
             this.tenderedTextBox.TextChanged += new System.EventHandler(this.tenderedTextBox_TextChanged);
             // 
             // tenderedCashTextLabel
@@ -260,6 +264,7 @@
             this.tenderedCashTextLabel.Size = new System.Drawing.Size(222, 24);
             this.tenderedCashTextLabel.TabIndex = 17;
             this.tenderedCashTextLabel.Text = "Enter Tendered Cash";
+            this.tenderedCashTextLabel.Visible = false;
             // 
             // reciptPriceDisplay
             // 
@@ -321,12 +326,45 @@
             this.itemBoughtOutput.TabIndex = 23;
             this.itemBoughtOutput.Text = "Nil";
             // 
+            // lineText2
+            // 
+            this.lineText2.AutoSize = true;
+            this.lineText2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lineText2.Location = new System.Drawing.Point(712, 248);
+            this.lineText2.Name = "lineText2";
+            this.lineText2.Size = new System.Drawing.Size(224, 32);
+            this.lineText2.TabIndex = 24;
+            this.lineText2.Text = "______________";
+            // 
+            // subTotalLabel
+            // 
+            this.subTotalLabel.AutoSize = true;
+            this.subTotalLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subTotalLabel.Location = new System.Drawing.Point(720, 288);
+            this.subTotalLabel.Name = "subTotalLabel";
+            this.subTotalLabel.Size = new System.Drawing.Size(101, 24);
+            this.subTotalLabel.TabIndex = 25;
+            this.subTotalLabel.Text = "Subtotal:";
+            // 
+            // subTotalOutput
+            // 
+            this.subTotalOutput.AutoSize = true;
+            this.subTotalOutput.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subTotalOutput.Location = new System.Drawing.Point(824, 288);
+            this.subTotalOutput.Name = "subTotalOutput";
+            this.subTotalOutput.Size = new System.Drawing.Size(34, 24);
+            this.subTotalOutput.TabIndex = 26;
+            this.subTotalOutput.Text = "Nil";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(952, 450);
+            this.Controls.Add(this.subTotalOutput);
+            this.Controls.Add(this.subTotalLabel);
+            this.Controls.Add(this.lineText2);
             this.Controls.Add(this.itemBoughtOutput);
             this.Controls.Add(this.reciptItemBoughtLabel);
             this.Controls.Add(this.tenderedReciptOutput);
@@ -388,6 +426,9 @@
         private System.Windows.Forms.Label tenderedReciptOutput;
         private System.Windows.Forms.Label reciptItemBoughtLabel;
         private System.Windows.Forms.Label itemBoughtOutput;
+        private System.Windows.Forms.Label lineText2;
+        private System.Windows.Forms.Label subTotalLabel;
+        private System.Windows.Forms.Label subTotalOutput;
     }
 }
 

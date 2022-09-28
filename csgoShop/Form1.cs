@@ -20,7 +20,10 @@ namespace csgoShop
         double glockClick;
         double taxRate = 0.13;
         double tendered;
+        double subtotal;
+        double itemBought;
         string deagleItem = "Deagle";
+
         
         public Form1()
         {
@@ -40,6 +43,8 @@ namespace csgoShop
             glockFiringTypeLabel.Visible = true;
             glockImage.Visible=true;
             glockPriceLabel.Visible=true;
+            tenderedCashTextLabel.Visible=true;
+            tenderedTextBox.Visible=true;
         }
 
         private void deagleImage_Click(object sender, EventArgs e)
@@ -47,6 +52,10 @@ namespace csgoShop
             reciptLabel.Visible = true;
             reciptPriceOutput.Text = $"{deagleCost}";
             itemBoughtOutput.Text = $"{deagleItem}";
+            itemBought = deagleCost;
+            subTotalOutput.Text = $"{itemBought}";
+
+
             
         }
 
@@ -54,6 +63,8 @@ namespace csgoShop
         {
             tendered = Convert.ToDouble(tenderedTextBox.Text);
             tenderedReciptOutput.Text = $"{tendered}";
+            subtotal = itemBought;
+
         }
     }
 }
