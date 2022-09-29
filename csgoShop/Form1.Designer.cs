@@ -64,6 +64,7 @@
             this.lineLabel1 = new System.Windows.Forms.Label();
             this.lineLabel2 = new System.Windows.Forms.Label();
             this.selectAnOptionLabel = new System.Windows.Forms.Label();
+            this.newOrderButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.shopBase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deagleImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tec9Image)).BeginInit();
@@ -110,7 +111,7 @@
             // deagleImage
             // 
             this.deagleImage.BackColor = System.Drawing.Color.DimGray;
-            this.deagleImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.deagleImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.deagleImage.Image = ((System.Drawing.Image)(resources.GetObject("deagleImage.Image")));
             this.deagleImage.Location = new System.Drawing.Point(756, 83);
             this.deagleImage.Margin = new System.Windows.Forms.Padding(4);
@@ -177,7 +178,7 @@
             // tec9Image
             // 
             this.tec9Image.BackColor = System.Drawing.Color.DimGray;
-            this.tec9Image.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tec9Image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tec9Image.Image = ((System.Drawing.Image)(resources.GetObject("tec9Image.Image")));
             this.tec9Image.Location = new System.Drawing.Point(756, 182);
             this.tec9Image.Margin = new System.Windows.Forms.Padding(4);
@@ -187,6 +188,7 @@
             this.tec9Image.TabIndex = 6;
             this.tec9Image.TabStop = false;
             this.tec9Image.Visible = false;
+            this.tec9Image.Click += new System.EventHandler(this.tec9Image_Click_1);
             // 
             // glockFiringTypeLabel
             // 
@@ -217,7 +219,7 @@
             // glockImage
             // 
             this.glockImage.BackColor = System.Drawing.Color.DimGray;
-            this.glockImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.glockImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.glockImage.Image = ((System.Drawing.Image)(resources.GetObject("glockImage.Image")));
             this.glockImage.Location = new System.Drawing.Point(756, 290);
             this.glockImage.Margin = new System.Windows.Forms.Padding(4);
@@ -227,6 +229,7 @@
             this.glockImage.TabIndex = 9;
             this.glockImage.TabStop = false;
             this.glockImage.Visible = false;
+            this.glockImage.Click += new System.EventHandler(this.glockImage_Click);
             // 
             // reciptLabel
             // 
@@ -515,12 +518,27 @@
             this.selectAnOptionLabel.Text = "Select an Option";
             this.selectAnOptionLabel.Visible = false;
             // 
+            // newOrderButton
+            // 
+            this.newOrderButton.BackColor = System.Drawing.Color.Black;
+            this.newOrderButton.Font = new System.Drawing.Font("Monospac821 BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newOrderButton.ForeColor = System.Drawing.Color.White;
+            this.newOrderButton.Location = new System.Drawing.Point(949, 484);
+            this.newOrderButton.Name = "newOrderButton";
+            this.newOrderButton.Size = new System.Drawing.Size(283, 37);
+            this.newOrderButton.TabIndex = 37;
+            this.newOrderButton.Text = "New Order";
+            this.newOrderButton.UseVisualStyleBackColor = false;
+            this.newOrderButton.Visible = false;
+            this.newOrderButton.Click += new System.EventHandler(this.newOrderButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1269, 554);
+            this.Controls.Add(this.newOrderButton);
             this.Controls.Add(this.glockImage);
             this.Controls.Add(this.tec9Image);
             this.Controls.Add(this.deagleImage);
@@ -605,6 +623,7 @@
         private System.Windows.Forms.Label lineLabel1;
         private System.Windows.Forms.Label lineLabel2;
         private System.Windows.Forms.Label selectAnOptionLabel;
+        private System.Windows.Forms.Button newOrderButton;
     }
 }
 

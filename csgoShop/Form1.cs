@@ -16,17 +16,16 @@ namespace csgoShop
         double deagleCost = 700;
         double tec9Cost = 500;
         double glockCost = 200;
-        double deagleClick;
-        double tec9Click;
-        double glockClick;
         double taxRate = 0.13;
         double tendered;
-        double subtotal;
-        double itemBought;
+        string itemBought;
+        double itemCost;
         double taxAmount;
         double total;
         double returned;
         string deagleItem = "Deagle";
+        string tec9Item = "Tec9";
+        string glockItem = "Glock";
 
         
         public Form1()
@@ -50,31 +49,35 @@ namespace csgoShop
             tenderedCashTextLabel.Visible=true;
             tenderedTextBox.Visible=true;
             calculatePurchaseButtton.Visible = true;
+        
         }
 
         private void deagleImage_Click(object sender, EventArgs e)
         {
-            
-            reciptPriceOutput.Text = $"{deagleCost}";
-            itemBoughtOutput.Text = $"{deagleItem}";
-            subTotalOutput.Text = $"{deagleCost}";
-            taxAmount = deagleCost * taxRate;
-            taxAmountOutput.Text = $"{taxAmount}";
-            total = taxAmount + deagleCost;
-            totalOutput.Text = $"{total}";
-            returned = tendered - total;
-            returnedAmountOutput.Text = $"{returned}";
-
-
-
-
+           
+            deagleImage.BorderStyle = BorderStyle.Fixed3D;
+            itemBought = deagleItem;
+            itemCost = deagleCost;
         }
 
+        private void tec9Image_Click_1(object sender, EventArgs e)
+        {
+            tec9Image.BorderStyle = BorderStyle.Fixed3D;
+            itemBought = tec9Item;
+            itemCost = tec9Cost;
+        }
+
+        private void glockImage_Click(object sender, EventArgs e)
+        {
+            glockImage.BorderStyle = BorderStyle.Fixed3D;
+            itemBought = glockItem;
+            itemCost = glockCost;
+        }
         private void tenderedTextBox_TextChanged(object sender, EventArgs e)
         {
             tendered = Convert.ToDouble(tenderedTextBox.Text);
             tenderedReciptOutput.Text = $"{tendered}";
-            subtotal = itemBought;
+            
 
         }
 
@@ -109,10 +112,47 @@ namespace csgoShop
                 returnedAmountOutput.Visible=true;
                 reciptPriceOutput.Visible = true;
                 tenderedReciptOutput.Visible = true;
-
+                newOrderButton.Visible = true;
                 
-
+                reciptPriceOutput.Text = $"{itemCost}";
+                itemBoughtOutput.Text = $"{itemBought}";
+                subTotalOutput.Text = $"{itemCost}";
+                taxAmount = itemCost * taxRate;
+                taxAmountOutput.Text = $"{taxAmount}";
+                total = taxAmount + itemCost;
+                returned = tendered - total;
+                totalOutput.Text = $"{total}";
+                returnedAmountOutput.Text = $"{returned}";
             }
         }
+
+        private void newOrderButton_Click(object sender, EventArgs e)
+        {
+            reciptLabel.Visible = false;
+            reciptItemBoughtLabel.Visible = false;
+            reciptPriceDisplay.Visible = false;
+            reciptTextLabel.Visible = false;
+            csgoReciptLabel.Visible = false;
+            lineLabel1.Visible = false;
+            lineLabel2.Visible = false;
+            tenderedDisplayLabel.Visible = false;
+            subTotalLabel.Visible = false;
+            taxAmountLabel.Visible = false;
+            totalTextLabel.Visible = false;
+            returnedAmountLabel.Visible = false;
+            itemBoughtOutput.Visible = false;
+            subTotalOutput.Visible = false;
+            taxAmountOutput.Visible = false;
+            totalOutput.Visible = false;
+            returnedAmountOutput.Visible = false;
+            reciptPriceOutput.Visible = false;
+            tenderedReciptOutput.Visible = false;
+            newOrderButton.Visible = false;
+            deagleImage.BorderStyle = BorderStyle.FixedSingle;
+            tec9Image.BorderStyle = BorderStyle.FixedSingle;
+            glockImage.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        
     }
 }
