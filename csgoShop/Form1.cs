@@ -29,6 +29,7 @@ namespace csgoShop
         double money = 10000;
         double moneyOutput;
 
+
         public Form1()
         {
             InitializeComponent();
@@ -51,6 +52,9 @@ namespace csgoShop
             tenderedTextBox.Visible = true;
             calculatePurchaseButtton.Visible = true;
             totalCostDisplay.Visible = true;
+            walletLabel.Visible = true;
+            moneyCounter.Visible = true;
+            moneyCounter.Text = $"{money.ToString("C")}";
         }
 
         private void deagleImage_Click(object sender, EventArgs e)
@@ -150,6 +154,7 @@ namespace csgoShop
                 returnedAmountOutput.Text = $"{returned}";
                 moneyOutput = money - total;
                 moneyCounter.Text = $"{moneyOutput.ToString("C")}";
+                
             }
         }
 

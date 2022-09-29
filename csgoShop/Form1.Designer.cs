@@ -529,6 +529,7 @@
             this.walletLabel.Size = new System.Drawing.Size(84, 29);
             this.walletLabel.TabIndex = 39;
             this.walletLabel.Text = "Wallet:";
+            this.walletLabel.Visible = false;
             // 
             // moneyCounter
             // 
@@ -537,9 +538,9 @@
             this.moneyCounter.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moneyCounter.Location = new System.Drawing.Point(104, 0);
             this.moneyCounter.Name = "moneyCounter";
-            this.moneyCounter.Size = new System.Drawing.Size(74, 29);
+            this.moneyCounter.Size = new System.Drawing.Size(0, 29);
             this.moneyCounter.TabIndex = 40;
-            this.moneyCounter.Text = "10000";
+            this.moneyCounter.Visible = false;
             // 
             // Form1
             // 
