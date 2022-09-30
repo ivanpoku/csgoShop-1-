@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 
+
 namespace csgoShop
 {
     public partial class Form1 : Form
@@ -19,7 +20,6 @@ namespace csgoShop
         double taxRate = 0.13;
         double tendered;
         string itemBought;
-        double itemCost;
         double taxAmount;
         double total;
         double returned;
@@ -28,6 +28,11 @@ namespace csgoShop
         string glockItem = "Glock";
         double money = 10000;
         double moneyOutput;
+        double multiItemPrices = 0;
+        int deagleCounter;
+        int tec9Counter;
+        int glockCounter;
+        double multiTaxTotal;
 
 
         public Form1()
@@ -60,32 +65,38 @@ namespace csgoShop
         private void deagleImage_Click(object sender, EventArgs e)
         {
 
+
             deagleImage.BorderStyle = BorderStyle.Fixed3D;
-            tec9Image.BorderStyle = BorderStyle.FixedSingle;
-            glockImage.BorderStyle = BorderStyle.FixedSingle;
             itemBought = deagleItem;
-            itemCost = deagleCost;
-            totalCostDisplay.Text = $"Total: {(itemCost * taxRate + itemCost).ToString("C")}";
+            deagleCounter = deagleCounter + 1;
+            multiItemPrices = multiItemPrices + deagleCost;
+            multiTaxTotal = multiItemPrices * taxRate + multiItemPrices;
+            totalCostDisplay.Text = $"Total: {multiTaxTotal.ToString("C")}";
+            deagleFiringTypeLabel.Text = $"Deagle x{deagleCounter}";
+
+
         }
 
         private void tec9Image_Click_1(object sender, EventArgs e)
         {
             tec9Image.BorderStyle = BorderStyle.Fixed3D;
-            glockImage.BorderStyle = BorderStyle.FixedSingle;
-            deagleImage.BorderStyle = BorderStyle.FixedSingle;
             itemBought = tec9Item;
-            itemCost = tec9Cost;
-            totalCostDisplay.Text = $"Total: {(itemCost * taxRate + itemCost).ToString("C")}";
+            tec9Counter = tec9Counter + 1;
+            multiItemPrices = multiItemPrices + tec9Cost;
+            multiTaxTotal = multiItemPrices * taxRate + multiItemPrices;
+            totalCostDisplay.Text = $"Total: {multiTaxTotal.ToString("C")}";
+            tec9FiringTypeLabel.Text = $"Tec9 x{tec9Counter}";
         }
 
         private void glockImage_Click(object sender, EventArgs e)
         {
             glockImage.BorderStyle = BorderStyle.Fixed3D;
-            deagleImage.BorderStyle = BorderStyle.FixedSingle;
-            tec9Image.BorderStyle = BorderStyle.FixedSingle;
             itemBought = glockItem;
-            itemCost = glockCost;
-            totalCostDisplay.Text = $"Total: {(itemCost * taxRate + itemCost).ToString("C")}";
+            glockCounter = glockCounter + 1;
+            multiItemPrices = multiItemPrices + glockCost;
+            multiTaxTotal = multiItemPrices * taxRate + multiItemPrices;
+            totalCostDisplay.Text = $"Total: {multiTaxTotal.ToString("C")}";
+            glockFiringTypeLabel.Text = $"Glock x{glockCounter}";
         }
         private void tenderedTextBox_TextChanged(object sender, EventArgs e)
 
@@ -96,7 +107,7 @@ namespace csgoShop
             {
 
                 tendered = Convert.ToDouble(tenderedTextBox.Text);
-                tenderedReciptOutput.Text = $"{tendered}";
+                tenderedReciptOutput.Text = $"{tendered.ToString("C")}";
 
 
             }
@@ -124,7 +135,6 @@ namespace csgoShop
             {
                 reciptLabel.Visible = true;
                 reciptItemBoughtLabel.Visible = true;
-                reciptPriceDisplay.Visible = true;
                 reciptTextLabel.Visible = true;
                 csgoReciptLabel.Visible = true;
                 lineLabel1.Visible = true;
@@ -139,19 +149,19 @@ namespace csgoShop
                 taxAmountOutput.Visible = true;
                 totalOutput.Visible = true;
                 returnedAmountOutput.Visible = true;
-                reciptPriceOutput.Visible = true;
                 tenderedReciptOutput.Visible = true;
                 newOrderButton.Visible = true;
 
-                reciptPriceOutput.Text = $"{itemCost}";
-                itemBoughtOutput.Text = $"{itemBought}";
-                subTotalOutput.Text = $"{itemCost}";
-                taxAmount = itemCost * taxRate;
-                taxAmountOutput.Text = $"{taxAmount}";
-                total = taxAmount + itemCost;
+                itemBoughtOutput.Text = $"Deagle x{deagleCounter}";
+                itemBoughtOutput.Text += $"\nTec9 x{tec9Counter}";
+                itemBoughtOutput.Text += $"\nGlock x{glockCounter}";
+                subTotalOutput.Text = $"{multiItemPrices.ToString("C")}";
+                taxAmount = multiItemPrices * taxRate;
+                taxAmountOutput.Text = $"{taxAmount.ToString("C")}";
+                total = taxAmount + multiItemPrices;
                 returned = tendered - total;
-                totalOutput.Text = $"{total}";
-                returnedAmountOutput.Text = $"{returned}";
+                totalOutput.Text = $"{total.ToString("C")}";
+                returnedAmountOutput.Text = $"{returned.ToString("C")}";
                 moneyOutput = money - total;
                 moneyCounter.Text = $"{moneyOutput.ToString("C")}";
                 
@@ -162,7 +172,6 @@ namespace csgoShop
         {
             reciptLabel.Visible = false;
             reciptItemBoughtLabel.Visible = false;
-            reciptPriceDisplay.Visible = false;
             reciptTextLabel.Visible = false;
             csgoReciptLabel.Visible = false;
             lineLabel1.Visible = false;
@@ -177,7 +186,6 @@ namespace csgoShop
             taxAmountOutput.Visible = false;
             totalOutput.Visible = false;
             returnedAmountOutput.Visible = false;
-            reciptPriceOutput.Visible = false;
             tenderedReciptOutput.Visible = false;
             newOrderButton.Visible = false;
             deagleImage.BorderStyle = BorderStyle.FixedSingle;

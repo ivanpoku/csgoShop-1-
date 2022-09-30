@@ -46,9 +46,7 @@
             this.reciptTextLabel = new System.Windows.Forms.Label();
             this.tenderedTextBox = new System.Windows.Forms.TextBox();
             this.tenderedCashTextLabel = new System.Windows.Forms.Label();
-            this.reciptPriceDisplay = new System.Windows.Forms.Label();
             this.tenderedDisplayLabel = new System.Windows.Forms.Label();
-            this.reciptPriceOutput = new System.Windows.Forms.Label();
             this.tenderedReciptOutput = new System.Windows.Forms.Label();
             this.reciptItemBoughtLabel = new System.Windows.Forms.Label();
             this.itemBoughtOutput = new System.Windows.Forms.Label();
@@ -139,7 +137,7 @@
             this.deagleFiringTypeLabel.AutoSize = true;
             this.deagleFiringTypeLabel.BackColor = System.Drawing.Color.DimGray;
             this.deagleFiringTypeLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deagleFiringTypeLabel.Location = new System.Drawing.Point(464, 88);
+            this.deagleFiringTypeLabel.Location = new System.Drawing.Point(456, 88);
             this.deagleFiringTypeLabel.Name = "deagleFiringTypeLabel";
             this.deagleFiringTypeLabel.Size = new System.Drawing.Size(69, 23);
             this.deagleFiringTypeLabel.TabIndex = 5;
@@ -151,7 +149,7 @@
             this.tec9FiringTypeLabel.AutoSize = true;
             this.tec9FiringTypeLabel.BackColor = System.Drawing.Color.DimGray;
             this.tec9FiringTypeLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tec9FiringTypeLabel.Location = new System.Drawing.Point(472, 176);
+            this.tec9FiringTypeLabel.Location = new System.Drawing.Point(456, 176);
             this.tec9FiringTypeLabel.Name = "tec9FiringTypeLabel";
             this.tec9FiringTypeLabel.Size = new System.Drawing.Size(49, 23);
             this.tec9FiringTypeLabel.TabIndex = 8;
@@ -189,7 +187,7 @@
             this.glockFiringTypeLabel.AutoSize = true;
             this.glockFiringTypeLabel.BackColor = System.Drawing.Color.DimGray;
             this.glockFiringTypeLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.glockFiringTypeLabel.Location = new System.Drawing.Point(472, 264);
+            this.glockFiringTypeLabel.Location = new System.Drawing.Point(456, 264);
             this.glockFiringTypeLabel.Name = "glockFiringTypeLabel";
             this.glockFiringTypeLabel.Size = new System.Drawing.Size(57, 23);
             this.glockFiringTypeLabel.TabIndex = 11;
@@ -226,7 +224,7 @@
             // 
             this.reciptLabel.BackColor = System.Drawing.Color.White;
             this.reciptLabel.ForeColor = System.Drawing.Color.Gray;
-            this.reciptLabel.Location = new System.Drawing.Point(696, 24);
+            this.reciptLabel.Location = new System.Drawing.Point(704, 24);
             this.reciptLabel.Name = "reciptLabel";
             this.reciptLabel.Size = new System.Drawing.Size(244, 408);
             this.reciptLabel.TabIndex = 12;
@@ -277,48 +275,24 @@
             this.tenderedCashTextLabel.Text = "Enter Tendered Cash";
             this.tenderedCashTextLabel.Visible = false;
             // 
-            // reciptPriceDisplay
-            // 
-            this.reciptPriceDisplay.AutoSize = true;
-            this.reciptPriceDisplay.BackColor = System.Drawing.Color.White;
-            this.reciptPriceDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reciptPriceDisplay.Location = new System.Drawing.Point(752, 161);
-            this.reciptPriceDisplay.Name = "reciptPriceDisplay";
-            this.reciptPriceDisplay.Size = new System.Drawing.Size(52, 20);
-            this.reciptPriceDisplay.TabIndex = 18;
-            this.reciptPriceDisplay.Text = "Price: ";
-            this.reciptPriceDisplay.Visible = false;
-            // 
             // tenderedDisplayLabel
             // 
             this.tenderedDisplayLabel.AutoSize = true;
             this.tenderedDisplayLabel.BackColor = System.Drawing.Color.White;
             this.tenderedDisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tenderedDisplayLabel.Location = new System.Drawing.Point(724, 202);
+            this.tenderedDisplayLabel.Location = new System.Drawing.Point(728, 240);
             this.tenderedDisplayLabel.Name = "tenderedDisplayLabel";
             this.tenderedDisplayLabel.Size = new System.Drawing.Size(81, 20);
             this.tenderedDisplayLabel.TabIndex = 19;
             this.tenderedDisplayLabel.Text = "Tendered:";
             this.tenderedDisplayLabel.Visible = false;
             // 
-            // reciptPriceOutput
-            // 
-            this.reciptPriceOutput.AutoSize = true;
-            this.reciptPriceOutput.BackColor = System.Drawing.Color.White;
-            this.reciptPriceOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reciptPriceOutput.Location = new System.Drawing.Point(824, 161);
-            this.reciptPriceOutput.Name = "reciptPriceOutput";
-            this.reciptPriceOutput.Size = new System.Drawing.Size(26, 20);
-            this.reciptPriceOutput.TabIndex = 20;
-            this.reciptPriceOutput.Text = "Nil";
-            this.reciptPriceOutput.Visible = false;
-            // 
             // tenderedReciptOutput
             // 
             this.tenderedReciptOutput.AutoSize = true;
             this.tenderedReciptOutput.BackColor = System.Drawing.Color.White;
             this.tenderedReciptOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tenderedReciptOutput.Location = new System.Drawing.Point(824, 202);
+            this.tenderedReciptOutput.Location = new System.Drawing.Point(824, 240);
             this.tenderedReciptOutput.Name = "tenderedReciptOutput";
             this.tenderedReciptOutput.Size = new System.Drawing.Size(26, 20);
             this.tenderedReciptOutput.TabIndex = 21;
@@ -330,11 +304,11 @@
             this.reciptItemBoughtLabel.AutoSize = true;
             this.reciptItemBoughtLabel.BackColor = System.Drawing.Color.White;
             this.reciptItemBoughtLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reciptItemBoughtLabel.Location = new System.Drawing.Point(760, 121);
+            this.reciptItemBoughtLabel.Location = new System.Drawing.Point(776, 120);
             this.reciptItemBoughtLabel.Name = "reciptItemBoughtLabel";
-            this.reciptItemBoughtLabel.Size = new System.Drawing.Size(45, 20);
+            this.reciptItemBoughtLabel.Size = new System.Drawing.Size(63, 20);
             this.reciptItemBoughtLabel.TabIndex = 22;
-            this.reciptItemBoughtLabel.Text = "Item:";
+            this.reciptItemBoughtLabel.Text = "Item(s):";
             this.reciptItemBoughtLabel.Visible = false;
             // 
             // itemBoughtOutput
@@ -342,7 +316,7 @@
             this.itemBoughtOutput.AutoSize = true;
             this.itemBoughtOutput.BackColor = System.Drawing.Color.White;
             this.itemBoughtOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemBoughtOutput.Location = new System.Drawing.Point(824, 121);
+            this.itemBoughtOutput.Location = new System.Drawing.Point(760, 152);
             this.itemBoughtOutput.Name = "itemBoughtOutput";
             this.itemBoughtOutput.Size = new System.Drawing.Size(26, 20);
             this.itemBoughtOutput.TabIndex = 23;
@@ -354,7 +328,7 @@
             this.subTotalLabel.AutoSize = true;
             this.subTotalLabel.BackColor = System.Drawing.Color.White;
             this.subTotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subTotalLabel.Location = new System.Drawing.Point(722, 254);
+            this.subTotalLabel.Location = new System.Drawing.Point(736, 272);
             this.subTotalLabel.Name = "subTotalLabel";
             this.subTotalLabel.Size = new System.Drawing.Size(73, 20);
             this.subTotalLabel.TabIndex = 25;
@@ -366,7 +340,7 @@
             this.subTotalOutput.AutoSize = true;
             this.subTotalOutput.BackColor = System.Drawing.Color.White;
             this.subTotalOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subTotalOutput.Location = new System.Drawing.Point(824, 254);
+            this.subTotalOutput.Location = new System.Drawing.Point(824, 272);
             this.subTotalOutput.Name = "subTotalOutput";
             this.subTotalOutput.Size = new System.Drawing.Size(26, 20);
             this.subTotalOutput.TabIndex = 26;
@@ -378,7 +352,7 @@
             this.taxAmountLabel.AutoSize = true;
             this.taxAmountLabel.BackColor = System.Drawing.Color.White;
             this.taxAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taxAmountLabel.Location = new System.Drawing.Point(769, 291);
+            this.taxAmountLabel.Location = new System.Drawing.Point(768, 304);
             this.taxAmountLabel.Name = "taxAmountLabel";
             this.taxAmountLabel.Size = new System.Drawing.Size(38, 20);
             this.taxAmountLabel.TabIndex = 27;
@@ -390,7 +364,7 @@
             this.taxAmountOutput.AutoSize = true;
             this.taxAmountOutput.BackColor = System.Drawing.Color.White;
             this.taxAmountOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taxAmountOutput.Location = new System.Drawing.Point(824, 291);
+            this.taxAmountOutput.Location = new System.Drawing.Point(824, 304);
             this.taxAmountOutput.Name = "taxAmountOutput";
             this.taxAmountOutput.Size = new System.Drawing.Size(26, 20);
             this.taxAmountOutput.TabIndex = 28;
@@ -402,7 +376,7 @@
             this.totalTextLabel.AutoSize = true;
             this.totalTextLabel.BackColor = System.Drawing.Color.White;
             this.totalTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTextLabel.Location = new System.Drawing.Point(751, 328);
+            this.totalTextLabel.Location = new System.Drawing.Point(760, 336);
             this.totalTextLabel.Name = "totalTextLabel";
             this.totalTextLabel.Size = new System.Drawing.Size(48, 20);
             this.totalTextLabel.TabIndex = 29;
@@ -414,7 +388,7 @@
             this.totalOutput.AutoSize = true;
             this.totalOutput.BackColor = System.Drawing.Color.White;
             this.totalOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalOutput.Location = new System.Drawing.Point(824, 328);
+            this.totalOutput.Location = new System.Drawing.Point(824, 336);
             this.totalOutput.Name = "totalOutput";
             this.totalOutput.Size = new System.Drawing.Size(26, 20);
             this.totalOutput.TabIndex = 30;
@@ -426,7 +400,7 @@
             this.returnedAmountLabel.AutoSize = true;
             this.returnedAmountLabel.BackColor = System.Drawing.Color.White;
             this.returnedAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnedAmountLabel.Location = new System.Drawing.Point(724, 367);
+            this.returnedAmountLabel.Location = new System.Drawing.Point(728, 368);
             this.returnedAmountLabel.Name = "returnedAmountLabel";
             this.returnedAmountLabel.Size = new System.Drawing.Size(80, 20);
             this.returnedAmountLabel.TabIndex = 31;
@@ -574,8 +548,6 @@
             this.Controls.Add(this.subTotalLabel);
             this.Controls.Add(this.itemBoughtOutput);
             this.Controls.Add(this.reciptItemBoughtLabel);
-            this.Controls.Add(this.reciptPriceOutput);
-            this.Controls.Add(this.reciptPriceDisplay);
             this.Controls.Add(this.glockFiringTypeLabel);
             this.Controls.Add(this.tenderedCashTextLabel);
             this.Controls.Add(this.tenderedTextBox);
@@ -617,9 +589,7 @@
         private System.Windows.Forms.Label reciptTextLabel;
         private System.Windows.Forms.TextBox tenderedTextBox;
         private System.Windows.Forms.Label tenderedCashTextLabel;
-        private System.Windows.Forms.Label reciptPriceDisplay;
         private System.Windows.Forms.Label tenderedDisplayLabel;
-        private System.Windows.Forms.Label reciptPriceOutput;
         private System.Windows.Forms.Label tenderedReciptOutput;
         private System.Windows.Forms.Label reciptItemBoughtLabel;
         private System.Windows.Forms.Label itemBoughtOutput;
