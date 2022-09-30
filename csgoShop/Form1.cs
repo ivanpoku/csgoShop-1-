@@ -130,7 +130,7 @@ namespace csgoShop
         private void calculatePurchaseButtton_Click(object sender, EventArgs e)
 
         {
-            if (tendered < deagleCost * taxRate + deagleCost)
+            if (tendered < multiItemPrices * taxRate + multiItemPrices)
             {
                 calculatePurchaseButtton.Text = $"Insufficent Funds";
                 this.Refresh();
@@ -175,10 +175,78 @@ namespace csgoShop
                 moneyCounter.Text = $"{moneyOutput.ToString("C")}";
                 
             }
+            if (tendered > 10000)
+            {
+                calculatePurchaseButtton.Text = $"Insufficent Funds";
+                
+                reciptLabel.Visible = false;
+                reciptItemBoughtLabel.Visible = false;
+                reciptTextLabel.Visible = false;
+                csgoReciptLabel.Visible = false;
+                lineLabel1.Visible = false;
+                lineLabel2.Visible = false;
+                tenderedDisplayLabel.Visible = false;
+                subTotalLabel.Visible = false;
+                taxAmountLabel.Visible = false;
+                totalTextLabel.Visible = false;
+                returnedAmountLabel.Visible = false;
+                itemBoughtOutput.Visible = false;
+                subTotalOutput.Visible = false;
+                taxAmountOutput.Visible = false;
+                totalOutput.Visible = false;
+                returnedAmountOutput.Visible = false;
+                tenderedReciptOutput.Visible = false;
+                newOrderButton.Visible = false;
+                this.Refresh();
+                Thread.Sleep(2000);
+                calculatePurchaseButtton.Text = $"Purchase";
+
+            }
+            else
+            {
+                reciptLabel.Visible = true;
+                reciptItemBoughtLabel.Visible = true;
+                reciptTextLabel.Visible = true;
+                csgoReciptLabel.Visible = true;
+                lineLabel1.Visible = true;
+                lineLabel2.Visible = true;
+                tenderedDisplayLabel.Visible = true;
+                subTotalLabel.Visible = true;
+                taxAmountLabel.Visible = true;
+                totalTextLabel.Visible = true;
+                returnedAmountLabel.Visible = true;
+                itemBoughtOutput.Visible = true;
+                subTotalOutput.Visible = true;
+                taxAmountOutput.Visible = true;
+                totalOutput.Visible = true;
+                returnedAmountOutput.Visible = true;
+                tenderedReciptOutput.Visible = true;
+                newOrderButton.Visible = true;
+                SoundPlayer reciptSound = new SoundPlayer(Properties.Resources.reciptPrint_Audio);
+                reciptSound.Play();
+
+                itemBoughtOutput.Text = $"Deagle x{deagleCounter}";
+                itemBoughtOutput.Text += $"\nTec9 x{tec9Counter}";
+                itemBoughtOutput.Text += $"\nGlock x{glockCounter}";
+                subTotalOutput.Text = $"{multiItemPrices.ToString("C")}";
+                taxAmount = multiItemPrices * taxRate;
+                taxAmountOutput.Text = $"{taxAmount.ToString("C")}";
+                total = taxAmount + multiItemPrices;
+                returned = tendered - total;
+                totalOutput.Text = $"{total.ToString("C")}";
+                returnedAmountOutput.Text = $"{returned.ToString("C")}";
+                moneyOutput = money - total;
+                moneyCounter.Text = $"{moneyOutput.ToString("C")}";
+
+            }
+
         }
 
         private void newOrderButton_Click(object sender, EventArgs e)
         {
+            deagleCounter = 0;
+            tec9Counter = 0;
+            glockCounter = 0;
             reciptLabel.Visible = false;
             reciptItemBoughtLabel.Visible = false;
             reciptTextLabel.Visible = false;
@@ -202,6 +270,6 @@ namespace csgoShop
             glockImage.BorderStyle = BorderStyle.FixedSingle;
         }
 
-
+       
     }
 }

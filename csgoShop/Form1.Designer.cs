@@ -235,7 +235,7 @@
             this.csgoReciptLabel.AutoSize = true;
             this.csgoReciptLabel.BackColor = System.Drawing.Color.White;
             this.csgoReciptLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.csgoReciptLabel.Location = new System.Drawing.Point(740, 32);
+            this.csgoReciptLabel.Location = new System.Drawing.Point(760, 32);
             this.csgoReciptLabel.Name = "csgoReciptLabel";
             this.csgoReciptLabel.Size = new System.Drawing.Size(116, 40);
             this.csgoReciptLabel.TabIndex = 13;
@@ -247,7 +247,7 @@
             this.reciptTextLabel.AutoSize = true;
             this.reciptTextLabel.BackColor = System.Drawing.Color.White;
             this.reciptTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reciptTextLabel.Location = new System.Drawing.Point(783, 79);
+            this.reciptTextLabel.Location = new System.Drawing.Point(792, 80);
             this.reciptTextLabel.Name = "reciptTextLabel";
             this.reciptTextLabel.Size = new System.Drawing.Size(55, 20);
             this.reciptTextLabel.TabIndex = 14;
