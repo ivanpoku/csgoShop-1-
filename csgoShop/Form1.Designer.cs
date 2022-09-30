@@ -224,7 +224,7 @@
             // 
             this.reciptLabel.BackColor = System.Drawing.Color.White;
             this.reciptLabel.ForeColor = System.Drawing.Color.Gray;
-            this.reciptLabel.Location = new System.Drawing.Point(704, 24);
+            this.reciptLabel.Location = new System.Drawing.Point(696, 16);
             this.reciptLabel.Name = "reciptLabel";
             this.reciptLabel.Size = new System.Drawing.Size(244, 408);
             this.reciptLabel.TabIndex = 12;
@@ -316,11 +316,12 @@
             this.itemBoughtOutput.AutoSize = true;
             this.itemBoughtOutput.BackColor = System.Drawing.Color.White;
             this.itemBoughtOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemBoughtOutput.Location = new System.Drawing.Point(760, 152);
+            this.itemBoughtOutput.Location = new System.Drawing.Point(792, 152);
             this.itemBoughtOutput.Name = "itemBoughtOutput";
             this.itemBoughtOutput.Size = new System.Drawing.Size(26, 20);
             this.itemBoughtOutput.TabIndex = 23;
             this.itemBoughtOutput.Text = "Nil";
+            this.itemBoughtOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.itemBoughtOutput.Visible = false;
             // 
             // subTotalLabel

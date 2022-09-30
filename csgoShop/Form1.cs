@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 
 namespace csgoShop
@@ -73,6 +74,8 @@ namespace csgoShop
             multiTaxTotal = multiItemPrices * taxRate + multiItemPrices;
             totalCostDisplay.Text = $"Total: {multiTaxTotal.ToString("C")}";
             deagleFiringTypeLabel.Text = $"Deagle x{deagleCounter}";
+            SoundPlayer selectPlayer = new SoundPlayer(Properties.Resources.select_Audio);
+            selectPlayer.Play();
 
 
         }
@@ -86,6 +89,8 @@ namespace csgoShop
             multiTaxTotal = multiItemPrices * taxRate + multiItemPrices;
             totalCostDisplay.Text = $"Total: {multiTaxTotal.ToString("C")}";
             tec9FiringTypeLabel.Text = $"Tec9 x{tec9Counter}";
+            SoundPlayer selectPlayer = new SoundPlayer(Properties.Resources.select_Audio);
+            selectPlayer.Play();
         }
 
         private void glockImage_Click(object sender, EventArgs e)
@@ -97,6 +102,8 @@ namespace csgoShop
             multiTaxTotal = multiItemPrices * taxRate + multiItemPrices;
             totalCostDisplay.Text = $"Total: {multiTaxTotal.ToString("C")}";
             glockFiringTypeLabel.Text = $"Glock x{glockCounter}";
+            SoundPlayer selectPlayer = new SoundPlayer(Properties.Resources.select_Audio);
+            selectPlayer.Play();
         }
         private void tenderedTextBox_TextChanged(object sender, EventArgs e)
 
@@ -151,6 +158,8 @@ namespace csgoShop
                 returnedAmountOutput.Visible = true;
                 tenderedReciptOutput.Visible = true;
                 newOrderButton.Visible = true;
+                SoundPlayer reciptSound = new SoundPlayer(Properties.Resources.reciptPrint_Audio);
+                reciptSound.Play();
 
                 itemBoughtOutput.Text = $"Deagle x{deagleCounter}";
                 itemBoughtOutput.Text += $"\nTec9 x{tec9Counter}";
