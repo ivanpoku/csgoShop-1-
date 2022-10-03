@@ -57,6 +57,8 @@
             this.totalCostDisplay = new System.Windows.Forms.Label();
             this.walletLabel = new System.Windows.Forms.Label();
             this.moneyCounter = new System.Windows.Forms.Label();
+            this.commandBarLabel = new System.Windows.Forms.Label();
+            this.chatTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.shopBase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deagleImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tec9Image)).BeginInit();
@@ -68,7 +70,7 @@
             this.shopBase.BackColor = System.Drawing.Color.Transparent;
             this.shopBase.Image = ((System.Drawing.Image)(resources.GetObject("shopBase.Image")));
             this.shopBase.Location = new System.Drawing.Point(32, 39);
-            this.shopBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.shopBase.Margin = new System.Windows.Forms.Padding(4);
             this.shopBase.Name = "shopBase";
             this.shopBase.Size = new System.Drawing.Size(523, 482);
             this.shopBase.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -106,7 +108,7 @@
             this.deagleImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.deagleImage.Image = ((System.Drawing.Image)(resources.GetObject("deagleImage.Image")));
             this.deagleImage.Location = new System.Drawing.Point(756, 82);
-            this.deagleImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deagleImage.Margin = new System.Windows.Forms.Padding(4);
             this.deagleImage.Name = "deagleImage";
             this.deagleImage.Size = new System.Drawing.Size(133, 62);
             this.deagleImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -173,7 +175,7 @@
             this.tec9Image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tec9Image.Image = ((System.Drawing.Image)(resources.GetObject("tec9Image.Image")));
             this.tec9Image.Location = new System.Drawing.Point(756, 182);
-            this.tec9Image.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tec9Image.Margin = new System.Windows.Forms.Padding(4);
             this.tec9Image.Name = "tec9Image";
             this.tec9Image.Size = new System.Drawing.Size(133, 62);
             this.tec9Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -214,7 +216,7 @@
             this.glockImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.glockImage.Image = ((System.Drawing.Image)(resources.GetObject("glockImage.Image")));
             this.glockImage.Location = new System.Drawing.Point(756, 290);
-            this.glockImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.glockImage.Margin = new System.Windows.Forms.Padding(4);
             this.glockImage.Name = "glockImage";
             this.glockImage.Size = new System.Drawing.Size(133, 62);
             this.glockImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -263,7 +265,7 @@
             // tenderedTextBox
             // 
             this.tenderedTextBox.Location = new System.Drawing.Point(608, 443);
-            this.tenderedTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tenderedTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.tenderedTextBox.Name = "tenderedTextBox";
             this.tenderedTextBox.Size = new System.Drawing.Size(265, 22);
             this.tenderedTextBox.TabIndex = 16;
@@ -422,12 +424,31 @@
             this.moneyCounter.TabIndex = 40;
             this.moneyCounter.Visible = false;
             // 
+            // commandBarLabel
+            // 
+            this.commandBarLabel.Location = new System.Drawing.Point(48, 39);
+            this.commandBarLabel.Name = "commandBarLabel";
+            this.commandBarLabel.Size = new System.Drawing.Size(488, 482);
+            this.commandBarLabel.TabIndex = 41;
+            this.commandBarLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.commandBarLabel.Visible = false;
+            // 
+            // chatTextBox
+            // 
+            this.chatTextBox.Location = new System.Drawing.Point(12, 528);
+            this.chatTextBox.Name = "chatTextBox";
+            this.chatTextBox.Size = new System.Drawing.Size(543, 22);
+            this.chatTextBox.TabIndex = 42;
+            this.chatTextBox.TextChanged += new System.EventHandler(this.chatTextBox_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1269, 554);
+            this.Controls.Add(this.chatTextBox);
+            this.Controls.Add(this.commandBarLabel);
             this.Controls.Add(this.moneyCounter);
             this.Controls.Add(this.walletLabel);
             this.Controls.Add(this.totalCostDisplay);
@@ -456,7 +477,7 @@
             this.Controls.Add(this.shopBase);
             this.Controls.Add(this.gunDisplayLabel);
             this.Controls.Add(this.reciptLabel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Counter Strike - Global Offence";
             ((System.ComponentModel.ISupportInitialize)(this.shopBase)).EndInit();
@@ -498,6 +519,8 @@
         private System.Windows.Forms.Label totalCostDisplay;
         private System.Windows.Forms.Label walletLabel;
         private System.Windows.Forms.Label moneyCounter;
+        private System.Windows.Forms.Label commandBarLabel;
+        private System.Windows.Forms.TextBox chatTextBox;
     }
 }
 

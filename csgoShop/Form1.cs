@@ -34,6 +34,7 @@ namespace csgoShop
         int tec9Counter;
         int glockCounter;
         double multiTaxTotal;
+        string chatCode;
 
 
         public Form1()
@@ -257,5 +258,12 @@ namespace csgoShop
         }
 
 
+        private void chatTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (chatTextBox.Text == "/csgoCmdPannel")
+            {
+                commandBarLabel.Visible = true;
+            }
+        }
     }
 }
