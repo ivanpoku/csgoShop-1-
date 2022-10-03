@@ -128,6 +128,7 @@ namespace csgoShop
         }
 
 
+
         private void calculatePurchaseButtton_Click(object sender, EventArgs e)
 
         {
@@ -141,6 +142,35 @@ namespace csgoShop
             }
             else
             {
+                SoundPlayer reciptSound = new SoundPlayer(Properties.Resources.reciptPrint_Audio);
+                reciptSound.Play();
+
+
+                for(int i = 0; i < 50; i++)
+                {
+                    int change = 0;
+                    int prevInt = 0;
+                    prevInt = reciptLabel.Height;
+                    change = 10;
+                    reciptLabel.Height = prevInt + change;
+
+                    Thread.Sleep(100);
+
+                    Refresh();
+                }
+                /*{
+                    Application.DoEvents();
+                    Thread.Sleep(1000);
+                    reciptLabel.Size = new Size(238, 88);
+                    Application.DoEvents();
+                    Thread.Sleep(1000);
+                    reciptLabel.Size = new Size(238, 184);
+                    Application.DoEvents();
+                    Thread.Sleep(1000);
+                    reciptLabel.Size = new Size(238, 416);
+                };*/
+
+
                 reciptLabel.Visible = true;
                 reciptItemBoughtLabel.Visible = true;
                 reciptTextLabel.Visible = true;
@@ -150,8 +180,8 @@ namespace csgoShop
                 lowerReceiptOutput.Visible = true;
                 itemBoughtOutput.Visible = true;
                 newOrderButton.Visible = true;
-                SoundPlayer reciptSound = new SoundPlayer(Properties.Resources.reciptPrint_Audio);
-                reciptSound.Play();
+
+
 
 
                 itemBoughtOutput.Text = $"Deagle x{deagleCounter}";
@@ -265,5 +295,7 @@ namespace csgoShop
                 commandBarLabel.Visible = true;
             }
         }
+
+
     }
 }
