@@ -59,6 +59,9 @@
             this.moneyCounter = new System.Windows.Forms.Label();
             this.commandBarLabel = new System.Windows.Forms.Label();
             this.chatTextBox = new System.Windows.Forms.TextBox();
+            this.addCashButton = new System.Windows.Forms.Button();
+            this.easterEggExitButton = new System.Windows.Forms.Button();
+            this.addCashTrillion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.shopBase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deagleImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tec9Image)).BeginInit();
@@ -219,7 +222,7 @@
             this.reciptLabel.ForeColor = System.Drawing.Color.White;
             this.reciptLabel.Location = new System.Drawing.Point(696, 16);
             this.reciptLabel.Name = "reciptLabel";
-            this.reciptLabel.Size = new System.Drawing.Size(238, 16);
+            this.reciptLabel.Size = new System.Drawing.Size(238, 416);
             this.reciptLabel.TabIndex = 12;
             this.reciptLabel.Visible = false;
             // 
@@ -404,10 +407,10 @@
             // 
             // commandBarLabel
             // 
-            this.commandBarLabel.Location = new System.Drawing.Point(36, 32);
+            this.commandBarLabel.Location = new System.Drawing.Point(16, 32);
             this.commandBarLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.commandBarLabel.Name = "commandBarLabel";
-            this.commandBarLabel.Size = new System.Drawing.Size(366, 392);
+            this.commandBarLabel.Size = new System.Drawing.Size(408, 392);
             this.commandBarLabel.TabIndex = 41;
             this.commandBarLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.commandBarLabel.Visible = false;
@@ -421,12 +424,53 @@
             this.chatTextBox.TabIndex = 42;
             this.chatTextBox.TextChanged += new System.EventHandler(this.chatTextBox_TextChanged);
             // 
+            // addCashButton
+            // 
+            this.addCashButton.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addCashButton.Location = new System.Drawing.Point(40, 88);
+            this.addCashButton.Name = "addCashButton";
+            this.addCashButton.Size = new System.Drawing.Size(360, 48);
+            this.addCashButton.TabIndex = 43;
+            this.addCashButton.Text = "+ 1 million dollars";
+            this.addCashButton.UseVisualStyleBackColor = true;
+            this.addCashButton.Visible = false;
+            this.addCashButton.Click += new System.EventHandler(this.addCashButton_Click);
+            // 
+            // easterEggExitButton
+            // 
+            this.easterEggExitButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.easterEggExitButton.BackColor = System.Drawing.Color.Red;
+            this.easterEggExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.easterEggExitButton.Location = new System.Drawing.Point(384, 40);
+            this.easterEggExitButton.Name = "easterEggExitButton";
+            this.easterEggExitButton.Size = new System.Drawing.Size(32, 32);
+            this.easterEggExitButton.TabIndex = 44;
+            this.easterEggExitButton.Text = "X";
+            this.easterEggExitButton.UseVisualStyleBackColor = false;
+            this.easterEggExitButton.Visible = false;
+            this.easterEggExitButton.Click += new System.EventHandler(this.easterEggExitButton_Click);
+            // 
+            // addCashTrillion
+            // 
+            this.addCashTrillion.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addCashTrillion.Location = new System.Drawing.Point(40, 160);
+            this.addCashTrillion.Name = "addCashTrillion";
+            this.addCashTrillion.Size = new System.Drawing.Size(360, 48);
+            this.addCashTrillion.TabIndex = 45;
+            this.addCashTrillion.Text = "+ 1 trillion dollars";
+            this.addCashTrillion.UseVisualStyleBackColor = true;
+            this.addCashTrillion.Visible = false;
+            this.addCashTrillion.Click += new System.EventHandler(this.addCashTrillion_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(952, 450);
+            this.Controls.Add(this.addCashTrillion);
+            this.Controls.Add(this.easterEggExitButton);
+            this.Controls.Add(this.addCashButton);
             this.Controls.Add(this.chatTextBox);
             this.Controls.Add(this.commandBarLabel);
             this.Controls.Add(this.moneyCounter);
@@ -500,6 +544,9 @@
         private System.Windows.Forms.Label moneyCounter;
         private System.Windows.Forms.Label commandBarLabel;
         private System.Windows.Forms.TextBox chatTextBox;
+        private System.Windows.Forms.Button addCashButton;
+        private System.Windows.Forms.Button easterEggExitButton;
+        private System.Windows.Forms.Button addCashTrillion;
     }
 }
 

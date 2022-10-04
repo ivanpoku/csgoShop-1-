@@ -136,28 +136,16 @@ namespace csgoShop
             {
                 calculatePurchaseButtton.Text = $"Insufficent Funds";
                 this.Refresh();
-                Thread.Sleep(2000);
+                Thread.Sleep(1);
                 calculatePurchaseButtton.Text = $"Purchase";
 
             }
             else
             {
-                SoundPlayer reciptSound = new SoundPlayer(Properties.Resources.reciptPrint_Audio);
-                reciptSound.Play();
 
 
-                for(int i = 0; i < 50; i++)
-                {
-                    int change = 0;
-                    int prevInt = 0;
-                    prevInt = reciptLabel.Height;
-                    change = 10;
-                    reciptLabel.Height = prevInt + change;
 
-                    Thread.Sleep(100);
 
-                    Refresh();
-                }
                 /*{
                     Application.DoEvents();
                     Thread.Sleep(1000);
@@ -191,7 +179,21 @@ namespace csgoShop
                 total = taxAmount + multiItemPrices;
                 returned = tendered - total;
                 moneyOutput = money - total;
-                moneyCounter.Text = $"{moneyOutput.ToString("C")}";
+
+                if (total >= money)
+                {
+
+                    money -= 0;
+                    moneyCounter.Text = $"{money.ToString("C")}";
+                }
+                else
+                {
+                    moneyOutput = money - total;
+                    moneyCounter.Text = $"{moneyOutput.ToString("C")}";
+                    SoundPlayer reciptSound = new SoundPlayer(Properties.Resources.reciptPrint_Audio);
+                    reciptSound.Play();
+                }
+
 
                 lowerReceiptOutput.Text = $"Tendered: {tendered.ToString("C")}";
                 lowerReceiptOutput.Text += $"\n";
@@ -205,7 +207,7 @@ namespace csgoShop
 
 
             }
-            if (tendered > 10000)
+            if (tendered > money)
             {
                 calculatePurchaseButtton.Text = $"Insufficent Funds";
 
@@ -221,6 +223,7 @@ namespace csgoShop
                 this.Refresh();
                 Thread.Sleep(2000);
                 calculatePurchaseButtton.Text = $"Purchase";
+                moneyCounter.Text = $"{money.ToString("C")}";
 
             }
             else
@@ -293,9 +296,31 @@ namespace csgoShop
             if (chatTextBox.Text == "/csgoCmdPannel")
             {
                 commandBarLabel.Visible = true;
+                addCashButton.Visible = true;
+                easterEggExitButton.Visible = true;
+                addCashTrillion.Visible = true;
             }
         }
 
+        private void addCashButton_Click(object sender, EventArgs e)
+        {
+            money += 1000000000;
+            moneyCounter.Text = $"{money.ToString("C")}";
+        }
 
+        private void easterEggExitButton_Click(object sender, EventArgs e)
+        {
+            easterEggExitButton.Visible = false;
+            addCashButton.Visible=false;
+            commandBarLabel.Visible=false;
+            addCashTrillion.Visible=false;
+        }
+
+        private void addCashTrillion_Click(object sender, EventArgs e)
+        {
+            money += 1000000000000000;
+            moneyCounter.Text = $"{money.ToString("C")}";
+
+        }
     }
 }
