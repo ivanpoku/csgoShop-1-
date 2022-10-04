@@ -62,6 +62,9 @@
             this.addCashButton = new System.Windows.Forms.Button();
             this.easterEggExitButton = new System.Windows.Forms.Button();
             this.addCashTrillion = new System.Windows.Forms.Button();
+            this.removeDeagle = new System.Windows.Forms.Button();
+            this.removeTec9 = new System.Windows.Forms.Button();
+            this.removeGlock = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.shopBase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deagleImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tec9Image)).BeginInit();
@@ -121,11 +124,11 @@
             this.deaglePriceLabel.AutoSize = true;
             this.deaglePriceLabel.BackColor = System.Drawing.Color.DimGray;
             this.deaglePriceLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deaglePriceLabel.Location = new System.Drawing.Point(448, 62);
+            this.deaglePriceLabel.Location = new System.Drawing.Point(440, 64);
             this.deaglePriceLabel.Name = "deaglePriceLabel";
-            this.deaglePriceLabel.Size = new System.Drawing.Size(101, 23);
+            this.deaglePriceLabel.Size = new System.Drawing.Size(50, 23);
             this.deaglePriceLabel.TabIndex = 4;
-            this.deaglePriceLabel.Text = "Price: $700";
+            this.deaglePriceLabel.Text = "$700";
             this.deaglePriceLabel.Visible = false;
             // 
             // deagleFiringTypeLabel
@@ -133,7 +136,7 @@
             this.deagleFiringTypeLabel.AutoSize = true;
             this.deagleFiringTypeLabel.BackColor = System.Drawing.Color.DimGray;
             this.deagleFiringTypeLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deagleFiringTypeLabel.Location = new System.Drawing.Point(456, 88);
+            this.deagleFiringTypeLabel.Location = new System.Drawing.Point(440, 88);
             this.deagleFiringTypeLabel.Name = "deagleFiringTypeLabel";
             this.deagleFiringTypeLabel.Size = new System.Drawing.Size(69, 23);
             this.deagleFiringTypeLabel.TabIndex = 5;
@@ -145,7 +148,7 @@
             this.tec9FiringTypeLabel.AutoSize = true;
             this.tec9FiringTypeLabel.BackColor = System.Drawing.Color.DimGray;
             this.tec9FiringTypeLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tec9FiringTypeLabel.Location = new System.Drawing.Point(456, 176);
+            this.tec9FiringTypeLabel.Location = new System.Drawing.Point(440, 176);
             this.tec9FiringTypeLabel.Name = "tec9FiringTypeLabel";
             this.tec9FiringTypeLabel.Size = new System.Drawing.Size(49, 23);
             this.tec9FiringTypeLabel.TabIndex = 8;
@@ -157,11 +160,11 @@
             this.tec9PriceLabel.AutoSize = true;
             this.tec9PriceLabel.BackColor = System.Drawing.Color.DimGray;
             this.tec9PriceLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tec9PriceLabel.Location = new System.Drawing.Point(447, 148);
+            this.tec9PriceLabel.Location = new System.Drawing.Point(440, 152);
             this.tec9PriceLabel.Name = "tec9PriceLabel";
-            this.tec9PriceLabel.Size = new System.Drawing.Size(101, 23);
+            this.tec9PriceLabel.Size = new System.Drawing.Size(50, 23);
             this.tec9PriceLabel.TabIndex = 7;
-            this.tec9PriceLabel.Text = "Price: $500";
+            this.tec9PriceLabel.Text = "$500";
             this.tec9PriceLabel.Visible = false;
             // 
             // tec9Image
@@ -169,7 +172,7 @@
             this.tec9Image.BackColor = System.Drawing.Color.DimGray;
             this.tec9Image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tec9Image.Image = ((System.Drawing.Image)(resources.GetObject("tec9Image.Image")));
-            this.tec9Image.Location = new System.Drawing.Point(567, 148);
+            this.tec9Image.Location = new System.Drawing.Point(568, 152);
             this.tec9Image.Name = "tec9Image";
             this.tec9Image.Size = new System.Drawing.Size(100, 51);
             this.tec9Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -183,7 +186,7 @@
             this.glockFiringTypeLabel.AutoSize = true;
             this.glockFiringTypeLabel.BackColor = System.Drawing.Color.DimGray;
             this.glockFiringTypeLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.glockFiringTypeLabel.Location = new System.Drawing.Point(456, 264);
+            this.glockFiringTypeLabel.Location = new System.Drawing.Point(440, 264);
             this.glockFiringTypeLabel.Name = "glockFiringTypeLabel";
             this.glockFiringTypeLabel.Size = new System.Drawing.Size(57, 23);
             this.glockFiringTypeLabel.TabIndex = 11;
@@ -195,11 +198,11 @@
             this.glockPriceLabel.AutoSize = true;
             this.glockPriceLabel.BackColor = System.Drawing.Color.DimGray;
             this.glockPriceLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.glockPriceLabel.Location = new System.Drawing.Point(447, 236);
+            this.glockPriceLabel.Location = new System.Drawing.Point(440, 232);
             this.glockPriceLabel.Name = "glockPriceLabel";
-            this.glockPriceLabel.Size = new System.Drawing.Size(101, 23);
+            this.glockPriceLabel.Size = new System.Drawing.Size(50, 23);
             this.glockPriceLabel.TabIndex = 10;
-            this.glockPriceLabel.Text = "Price: $200";
+            this.glockPriceLabel.Text = "$200";
             this.glockPriceLabel.Visible = false;
             // 
             // glockImage
@@ -207,7 +210,7 @@
             this.glockImage.BackColor = System.Drawing.Color.DimGray;
             this.glockImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.glockImage.Image = ((System.Drawing.Image)(resources.GetObject("glockImage.Image")));
-            this.glockImage.Location = new System.Drawing.Point(567, 236);
+            this.glockImage.Location = new System.Drawing.Point(568, 232);
             this.glockImage.Name = "glockImage";
             this.glockImage.Size = new System.Drawing.Size(100, 51);
             this.glockImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -375,7 +378,7 @@
             this.totalCostDisplay.AutoSize = true;
             this.totalCostDisplay.BackColor = System.Drawing.Color.DimGray;
             this.totalCostDisplay.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalCostDisplay.Location = new System.Drawing.Point(488, 296);
+            this.totalCostDisplay.Location = new System.Drawing.Point(448, 296);
             this.totalCostDisplay.Name = "totalCostDisplay";
             this.totalCostDisplay.Size = new System.Drawing.Size(65, 24);
             this.totalCostDisplay.TabIndex = 38;
@@ -462,12 +465,51 @@
             this.addCashTrillion.Visible = false;
             this.addCashTrillion.Click += new System.EventHandler(this.addCashTrillion_Click);
             // 
+            // removeDeagle
+            // 
+            this.removeDeagle.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeDeagle.Location = new System.Drawing.Point(496, 64);
+            this.removeDeagle.Name = "removeDeagle";
+            this.removeDeagle.Size = new System.Drawing.Size(67, 24);
+            this.removeDeagle.TabIndex = 46;
+            this.removeDeagle.Text = "Remove 1";
+            this.removeDeagle.UseVisualStyleBackColor = true;
+            this.removeDeagle.Visible = false;
+            this.removeDeagle.Click += new System.EventHandler(this.removeDeagle_Click);
+            // 
+            // removeTec9
+            // 
+            this.removeTec9.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeTec9.Location = new System.Drawing.Point(496, 152);
+            this.removeTec9.Name = "removeTec9";
+            this.removeTec9.Size = new System.Drawing.Size(67, 24);
+            this.removeTec9.TabIndex = 47;
+            this.removeTec9.Text = "Remove 1";
+            this.removeTec9.UseVisualStyleBackColor = true;
+            this.removeTec9.Visible = false;
+            this.removeTec9.Click += new System.EventHandler(this.removeTec9_Click);
+            // 
+            // removeGlock
+            // 
+            this.removeGlock.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeGlock.Location = new System.Drawing.Point(496, 232);
+            this.removeGlock.Name = "removeGlock";
+            this.removeGlock.Size = new System.Drawing.Size(67, 24);
+            this.removeGlock.TabIndex = 48;
+            this.removeGlock.Text = "Remove 1";
+            this.removeGlock.UseVisualStyleBackColor = true;
+            this.removeGlock.Visible = false;
+            this.removeGlock.Click += new System.EventHandler(this.removeGlock_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(952, 450);
+            this.Controls.Add(this.removeGlock);
+            this.Controls.Add(this.removeTec9);
+            this.Controls.Add(this.removeDeagle);
             this.Controls.Add(this.addCashTrillion);
             this.Controls.Add(this.easterEggExitButton);
             this.Controls.Add(this.addCashButton);
@@ -501,8 +543,9 @@
             this.Controls.Add(this.shopBase);
             this.Controls.Add(this.gunDisplayLabel);
             this.Controls.Add(this.reciptLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "zx";
+            this.Text = "Counter Strike Global Offence";
             ((System.ComponentModel.ISupportInitialize)(this.shopBase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deagleImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tec9Image)).EndInit();
@@ -547,6 +590,9 @@
         private System.Windows.Forms.Button addCashButton;
         private System.Windows.Forms.Button easterEggExitButton;
         private System.Windows.Forms.Button addCashTrillion;
+        private System.Windows.Forms.Button removeDeagle;
+        private System.Windows.Forms.Button removeTec9;
+        private System.Windows.Forms.Button removeGlock;
     }
 }
 

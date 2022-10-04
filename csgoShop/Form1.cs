@@ -46,6 +46,9 @@ namespace csgoShop
         private void pistolShopFunction_Click(object sender, EventArgs e)
         {
             gunDisplayLabel.Visible = true;
+            removeDeagle.Visible = true;
+            removeGlock.Visible = true;
+            removeTec9.Visible = true;
             deagleFiringTypeLabel.Visible = true;
             deagleImage.Visible = true;
             deaglePriceLabel.Visible = true;
@@ -327,6 +330,33 @@ namespace csgoShop
             money += 1000000000000000;
             moneyCounter.Text = $"{money.ToString("C")}";
             
+        }
+
+        private void removeDeagle_Click(object sender, EventArgs e)
+        {
+            deagleCounter -= 1;
+            multiItemPrices = multiItemPrices - deagleCost;
+            multiTaxTotal = multiItemPrices * taxRate + multiItemPrices;
+            totalCostDisplay.Text = $"Total: {multiTaxTotal.ToString("C")}";
+            deagleFiringTypeLabel.Text = $"Deagle x{deagleCounter}";
+        }
+
+        private void removeTec9_Click(object sender, EventArgs e)
+        {
+            tec9Counter -= 1;
+            multiItemPrices = multiItemPrices - tec9Cost;
+            multiTaxTotal = multiItemPrices * taxRate + multiItemPrices;
+            totalCostDisplay.Text = $"Total: {multiTaxTotal.ToString("C")}";
+            tec9FiringTypeLabel.Text = $"Deagle x{tec9Counter}";
+        }
+
+        private void removeGlock_Click(object sender, EventArgs e)
+        {
+            glockCounter -= 1;
+            multiItemPrices = multiItemPrices - glockCost;
+            multiTaxTotal = multiItemPrices * taxRate + multiItemPrices;
+            totalCostDisplay.Text = $"Total: {multiTaxTotal.ToString("C")}";
+            glockFiringTypeLabel.Text = $"Deagle x{glockCounter}";
         }
     }
 }
