@@ -272,6 +272,7 @@ namespace csgoShop
             deagleCounter = 0;
             tec9Counter = 0;
             glockCounter = 0;
+            total = 0;
             deagleFiringTypeLabel.Text = $"Deagle x{deagleCounter}";
             tec9FiringTypeLabel.Text = $"Tec9 x{tec9Counter}";
             glockFiringTypeLabel.Text = $"Glock x{glockCounter}";
@@ -293,12 +294,15 @@ namespace csgoShop
 
         private void chatTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (chatTextBox.Text == "/csgoCmdPannel")
+            if (chatTextBox.Text == "/funnyhaha")
             {
                 commandBarLabel.Visible = true;
                 addCashButton.Visible = true;
                 easterEggExitButton.Visible = true;
                 addCashTrillion.Visible = true;
+                walletLabel.Visible = true;
+                moneyCounter.Visible = true;
+                moneyCounter.Text = $"{money.ToString("C")}";
             }
         }
 
@@ -314,13 +318,15 @@ namespace csgoShop
             addCashButton.Visible=false;
             commandBarLabel.Visible=false;
             addCashTrillion.Visible=false;
+            walletLabel.Visible = false;
+            moneyCounter.Visible=false;
         }
 
         private void addCashTrillion_Click(object sender, EventArgs e)
         {
             money += 1000000000000000;
             moneyCounter.Text = $"{money.ToString("C")}";
-
+            
         }
     }
 }
